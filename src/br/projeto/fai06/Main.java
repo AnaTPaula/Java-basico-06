@@ -8,28 +8,46 @@ public class Main {
 	}
 
 	private void start() {
-	String array[] = new String[4];
-        
-        array[0] = "civic";
-        array[1] = "gol";
-        array[2] = "palio";
-        array[3] = "uno";
-        
-        for (String iteracao : array) {        	
+	String[] carros = {"Civic", "Gol", "Palio", "Uno"};
+	
+	System.out.println("Posição 1: " + carros[10]);
+	
+        for (String carro : carros) {        	
         	
-        	System.out.println("Nome do carro: "+iteracao);
-        	
+        	System.out.println("Carro: "+ carro);
 		}
         
         System.out.println("\n----------------------\n");
         
-        for (String iteracao : array) {
-        	array[1] = "L200";
-            System.out.println("Nome do carro: "+iteracao);
+        
+        carros[1] = "L200";
+        
+        for (String carro : carros) {
+        	
+            System.out.println("Carro: "+ carro);
 		}
-        for (String iteracao: array) {
-			array[array.length-1]="gol";
-			System.out.println(iteracao);
+        
+        int tamanhoDoNovoArray = carros.length + 1;
+        String[] novoArrayDeCarros =
+        		new String [tamanhoDoNovoArray];   
+ 
+	        
+	        for (int i =0; i < carros.length; i++) {
+	        	
+	        	String carro = carros[i];
+	        	novoArrayDeCarros[i]= carro;
+	        	
+	        	
+	        }
+	        
+	        novoArrayDeCarros[tamanhoDoNovoArray -1] = "Gol";
+	        
+	        System.out.println("-----");
+	        
+	        for (String carro : novoArrayDeCarros)
+	        {
+	        	System.out.println("Carro: " + carro);
+	      
 		}
         
 	}
